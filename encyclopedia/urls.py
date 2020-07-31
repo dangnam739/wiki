@@ -8,3 +8,4 @@ urlpatterns = [
     # path("create", views.create, name="create"),
     # path("wiki", views.randomPage, name="random")
 ]
+""
