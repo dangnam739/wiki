@@ -76,7 +76,7 @@ def entry(request, title):
 
 def create(request):
     if request.method == "POST":
-        forms = Post(request.POST)
+        form = Post(request.POST)
         if form.is_valid():
             title = form.cleaned_data["title"]
             textarea = form.cleaned_data["textarea"]
@@ -99,4 +99,39 @@ def create(request):
         return render(request, "encyclopedia/create.html", {
             "form": Search(),
             "post": Post()
+        })
+
+def edit(request, title):
+    if request.method == "GET":
+        page = util.get_entry(title)
+        return render(request, "encyclopedia/edit.html", {
+            "form": Search(),
+            "edit": Edit(initial={'textarea': page}),
+            "title": title
+        })
+    else:
+        form = Edit(request.POST)
+        if form.is_valid():
+            textarea = form.cleaned_data["textarea"]
+            util.save_entry(title, textarea)
+            page = util.get_entry(title)
+            page_converted = markdowner.convert(page)
+            return render(request, "encyclopedia/entry.html", {
+                "form": Search(),
+                "page": page_converted,
+                "title": title
+            })
+
+def randomPage(request):
+    if request.method == "GET":
+        entries = util.list_entries()
+        num = random.randint(0, len(entries) - 1)
+        page_random = entries[num]
+        page = util.get_entry(page_random)
+        page_converted = markdowner.convert(page)
+
+        return render(request, "encyclopedia/entry.html", {
+            "form": Search(),
+            "page": page_converted,
+            "title": page_random
         })
