@@ -1,3 +1,11 @@
 # wiki
 
-## [Project 1 of CS50's Web Programming with Python and Javascript](https://cs50.harvard.edu/web/2020/projects/1/wiki/)
+## Project 1 of [CS50's Web Programming with Python and Javascript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript) Course
+
+**Task**: Design a Wikipedia-like online encyclopedia.<br />
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+This project was made by **Django**
+
+_Result such as:_
+![wiki image](/wiki.png)
