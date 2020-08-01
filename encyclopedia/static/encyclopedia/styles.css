@@ -14,7 +14,7 @@
 
     .display-4{
         margin-left: 200px;
-        font-size: 100px;15px
+        font-size: 100px;
     }
 
     .entry-link{
@@ -34,8 +34,8 @@
 
     .myfieldclass{
         border: none;
-        margin-left: 18%;
-        font-size: 45px;
+        margin-left: 20%;
+        font-size: 40px;
         background-color: aliceblue;
     }
 
@@ -217,10 +217,6 @@
 
     li a:hover{
         color:black;
-    }
-
-    .myfieldclass{
-        border: none;
     }
 
     .entry{
