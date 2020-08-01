@@ -7,5 +7,18 @@ This is Project 1 of [CS50's Web Programming with Python and Javascript](https:/
 **Task**: Design a Wikipedia-like online encyclopedia.<br />
 This project was made by [**Django**](https://www.djangoproject.com/)
 
+## Requirements to run wiki
+- Install python and pip.
+
+- Then, install **Django** and **markdown2**
+```console
+python -m pip install Django
+
+pip3 install markdown2
+```
+- In terminal, runserver:
+```console
+python manage.py runserver
+```
 _Result such as:_
 ![wiki image](/wiki.png)
